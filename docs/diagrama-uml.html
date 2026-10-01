@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Diagrama de Classes UML</title>
+<style>html,body{margin:0;background:#fff;}svg{display:block;max-width:100%;height:auto;} .name{font-family:"Segoe UI",sans-serif;font-size:22px;font-weight:600;fill:#252525;} .member{font-family:Consolas,monospace;font-size:16px;fill:#333;} .stereotype{font-family:"Segoe UI",sans-serif;font-size:16px;fill:#444;}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 940" width="1680" height="940" role="img" aria-labelledby="diagrama-uml-title diagrama-uml-desc">
+<title id="diagrama-uml-title">Integração dos padrões de criação de documentos</title>
+<desc id="diagrama-uml-desc">Cliente solicita contratos e procurações PF ou PJ, com Singleton em MetodoFabrica e métodos de criação sobrescritos pelas fábricas concretas que implementam as famílias de documentos.</desc>
+<defs><marker id="triangle" markerWidth="16" markerHeight="14" refX="15" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 15,7 L 1,13 Z" fill="white" stroke="#505050" stroke-width="1.5"/></marker>
+<marker id="dependency" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 11,6 L 1,11" fill="none" stroke="#666666" stroke-width="1.5"/></marker></defs>
+<rect width="1680" height="940" fill="white"/>
+<g data-source="ProcuracaoPF" data-target="Procuracao" data-relation="realization"><path d="M 160,584 L 160,404" fill="none" stroke="white" stroke-width="5"/><path d="M 160,584 L 160,404" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#triangle)"/></g>
+<g data-source="ProcuracaoPJ" data-target="Procuracao" data-relation="realization"><path d="M 40,864 L 24,864 Q 16,864 16,856 L 16,360 Q 16,352 24,352 L 40,352" fill="none" stroke="white" stroke-width="5"/><path d="M 40,864 L 24,864 Q 16,864 16,856 L 16,360 Q 16,352 24,352 L 40,352" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#triangle)"/></g>
+<g data-source="ContratoPF" data-target="Contrato" data-relation="realization"><path d="M 1500,584 L 1500,404" fill="none" stroke="white" stroke-width="5"/><path d="M 1500,584 L 1500,404" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#triangle)"/></g>
+<g data-source="ContratoPJ" data-target="Contrato" data-relation="realization"><path d="M 1640,864 L 1656,864 Q 1664,864 1664,856 L 1664,360 Q 1664,352 1656,352 L 1640,352" fill="none" stroke="white" stroke-width="5"/><path d="M 1640,864 L 1656,864 Q 1664,864 1664,856 L 1664,360 Q 1664,352 1656,352 L 1640,352" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#triangle)"/></g>
+<g data-source="FabricaPF" data-target="FabricaAbstrata" data-relation="inheritance"><path d="M 680,580 L 680,460" fill="none" stroke="white" stroke-width="5"/><path d="M 680,580 L 680,460" fill="none" stroke="#666666" stroke-width="1.5" marker-end="url(#triangle)"/></g>
+<g data-source="FabricaPJ" data-target="FabricaAbstrata" data-relation="inheritance"><path d="M 1100,852 L 1132,852 Q 1140,852 1140,844 L 1140,512 Q 1140,504 1132,504 L 1028,504 Q 1020,504 1020,496 L 1020,460" fill="none" stroke="white" stroke-width="5"/><path d="M 1100,852 L 1132,852 Q 1140,852 1140,844 L 1140,512 Q 1140,504 1132,504 L 1028,504 Q 1020,504 1020,496 L 1020,460" fill="none" stroke="#666666" stroke-width="1.5" marker-end="url(#triangle)"/></g>
+<g data-source="FabricaPF" data-target="ProcuracaoPF" data-relation="dependency"><path d="M 600,624 L 340,624" fill="none" stroke="white" stroke-width="5"/><path d="M 600,624 L 340,624" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="FabricaPF" data-target="ContratoPF" data-relation="dependency"><path d="M 1100,624 L 1133,624 Q 1140,636 1147,624 L 1340,624" fill="none" stroke="white" stroke-width="5"/><path d="M 1100,624 L 1133,624 Q 1140,636 1147,624 L 1340,624" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="FabricaPJ" data-target="ProcuracaoPJ" data-relation="dependency"><path d="M 600,864 L 340,864" fill="none" stroke="white" stroke-width="5"/><path d="M 600,864 L 340,864" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="FabricaPJ" data-target="ContratoPJ" data-relation="dependency"><path d="M 1100,888 L 1340,888" fill="none" stroke="white" stroke-width="5"/><path d="M 1100,888 L 1340,888" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="FabricaAbstrata" data-target="Procuracao" data-relation="dependency"><path d="M 580,352 L 300,352" fill="none" stroke="white" stroke-width="5"/><path d="M 580,352 L 300,352" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="FabricaAbstrata" data-target="Contrato" data-relation="dependency"><path d="M 1120,352 L 1380,352" fill="none" stroke="white" stroke-width="5"/><path d="M 1120,352 L 1380,352" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="MetodoFabrica" data-target="FabricaAbstrata" data-relation="dependency"><path d="M 1200,180 L 1200,220 Q 1200,228 1192,228 L 1028,228 Q 1020,228 1020,236 L 1020,276" fill="none" stroke="white" stroke-width="5"/><path d="M 1200,180 L 1200,220 Q 1200,228 1192,228 L 1028,228 Q 1020,228 1020,236 L 1020,276" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="MetodoFabrica" data-target="FabricaPF" data-relation="dependency"><path d="M 1420,180 L 1420,240 Q 1420,248 1412,248 L 1188,248 Q 1180,248 1180,256 L 1180,345 Q 1168,352 1180,359 L 1180,540 Q 1180,548 1172,548 L 1147,548 Q 1140,536 1133,548 L 1008,548 Q 1000,548 1000,556 L 1000,580" fill="none" stroke="white" stroke-width="5"/><path d="M 1420,180 L 1420,240 Q 1420,248 1412,248 L 1188,248 Q 1180,248 1180,256 L 1180,345 Q 1168,352 1180,359 L 1180,540 Q 1180,548 1172,548 L 1147,548 Q 1140,536 1133,548 L 1008,548 Q 1000,548 1000,556 L 1000,580" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="MetodoFabrica" data-target="FabricaPJ" data-relation="dependency"><path d="M 1540,180 L 1540,256 Q 1540,264 1532,264 L 1228,264 Q 1220,264 1220,272 L 1220,345 Q 1208,352 1220,359 L 1220,617 Q 1208,624 1220,631 L 1220,780 Q 1220,788 1212,788 L 1147,788 Q 1140,776 1133,788 L 1008,788 Q 1000,788 1000,796 L 1000,820" fill="none" stroke="white" stroke-width="5"/><path d="M 1540,180 L 1540,256 Q 1540,264 1532,264 L 1228,264 Q 1220,264 1220,272 L 1220,345 Q 1208,352 1220,359 L 1220,617 Q 1208,624 1220,631 L 1220,780 Q 1220,788 1212,788 L 1147,788 Q 1140,776 1133,788 L 1008,788 Q 1000,788 1000,796 L 1000,820" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="Cliente" data-target="FabricaAbstrata" data-relation="dependency"><path d="M 580,208 L 580,228 Q 580,236 588,236 L 672,236 Q 680,236 680,244 L 680,276" fill="none" stroke="white" stroke-width="5"/><path d="M 580,208 L 580,228 Q 580,236 588,236 L 672,236 Q 680,236 680,244 L 680,276" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="Cliente" data-target="Procuracao" data-relation="dependency"><path d="M 160,208 L 160,308" fill="none" stroke="white" stroke-width="5"/><path d="M 160,208 L 160,308" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g data-source="Cliente" data-target="Contrato" data-relation="dependency"><path d="M 740,100 L 824,100 Q 832,100 832,108 L 832,204 Q 832,212 840,212 L 1193,212 Q 1200,224 1207,212 L 1413,212 Q 1420,224 1427,212 L 1533,212 Q 1540,224 1547,212 L 1656,212 Q 1664,212 1664,220 L 1664,324 Q 1664,332 1656,332 L 1640,332" fill="none" stroke="white" stroke-width="5"/><path d="M 740,100 L 824,100 Q 832,100 832,108 L 832,204 Q 832,212 840,212 L 1193,212 Q 1200,224 1207,212 L 1413,212 Q 1420,224 1427,212 L 1533,212 Q 1540,224 1547,212 L 1656,212 Q 1664,212 1664,220 L 1664,324 Q 1664,332 1656,332 L 1640,332" fill="none" stroke="#666666" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#dependency)"/></g>
+<g class="uml-class" data-class="Cliente" data-box="40,16,700,192"><rect x="40" y="16" width="700" height="192" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="41" y="17" width="698" height="39" fill="#eeeeee"/><path d="M 40,56 H 740" stroke="#555555"/>
+<text x="390.0" y="43" class="name" text-anchor="middle">Cliente</text>
+<text x="56" y="80" class="member" >- nome: String</text>
+<path d="M 40,94 H 740" stroke="#777777"/>
+<text x="56" y="116" class="member" >+ Cliente(nome: String)</text>
+<text x="56" y="142" class="member" >+ getNome(): String</text>
+<text x="56" y="168" class="member" >+ solicitarProcuracao(fabrica: FabricaAbstrata): Procuracao</text>
+<text x="56" y="194" class="member" >+ solicitarContrato(fabrica: FabricaAbstrata): Contrato</text>
+</g>
+<g class="uml-class" data-class="MetodoFabrica" data-box="1020,16,600,164"><rect x="1020" y="16" width="600" height="164" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="1021" y="17" width="598" height="39" fill="#eeeeee"/><path d="M 1020,56 H 1620" stroke="#555555"/>
+<text x="1320.0" y="43" class="name" text-anchor="middle">MetodoFabrica</text>
+<text x="1036" y="80" class="member" text-decoration="underline">- instancia: MetodoFabrica</text>
+<path d="M 1020,94 H 1620" stroke="#777777"/>
+<text x="1036" y="116" class="member" >- MetodoFabrica()</text>
+<text x="1036" y="142" class="member" text-decoration="underline" >+ getInstancia(): MetodoFabrica</text>
+<text x="1036" y="168" class="member" >+ criarFabrica(tipo: String): FabricaAbstrata</text>
+</g>
+<g class="uml-class" data-class="FabricaAbstrata" data-box="580,276,540,184"><rect x="580" y="276" width="540" height="184" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="581" y="277" width="538" height="39" fill="#e9eef2"/><path d="M 580,316 H 1120" stroke="#555555"/>
+<text x="850.0" y="303" class="name" text-anchor="middle" font-style="italic">FabricaAbstrata</text>
+<text x="596" y="340" class="member" font-style="italic">+ criarProcuracao(): Procuracao</text>
+<text x="596" y="366" class="member" font-style="italic">+ criarContrato(): Contrato</text>
+<text x="596" y="392" class="member" >+ emitirProcuracao(): Procuracao</text>
+<text x="596" y="418" class="member" >+ assinarContrato(): Contrato</text>
+</g>
+<g class="uml-class" data-class="Procuracao" data-box="40,308,260,96"><rect x="40" y="308" width="260" height="96" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="41" y="309" width="258" height="59" fill="#eeeeee"/><path d="M 40,368 H 300" stroke="#555555"/>
+<text x="170.0" y="330" class="stereotype" text-anchor="middle">«interface»</text>
+<text x="170.0" y="355" class="name" text-anchor="middle">Procuracao</text>
+<text x="56" y="392" class="member" >+ emitir(): void</text>
+</g>
+<g class="uml-class" data-class="Contrato" data-box="1380,308,260,96"><rect x="1380" y="308" width="260" height="96" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="1381" y="309" width="258" height="59" fill="#eeeeee"/><path d="M 1380,368 H 1640" stroke="#555555"/>
+<text x="1510.0" y="330" class="stereotype" text-anchor="middle">«interface»</text>
+<text x="1510.0" y="355" class="name" text-anchor="middle">Contrato</text>
+<text x="1396" y="392" class="member" >+ assinar(): void</text>
+</g>
+<g class="uml-class" data-class="FabricaPF" data-box="600,580,500,104"><rect x="600" y="580" width="500" height="104" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="601" y="581" width="498" height="39" fill="#eeeeee"/><path d="M 600,620 H 1100" stroke="#555555"/>
+<text x="850.0" y="607" class="name" text-anchor="middle">FabricaPF</text>
+<text x="616" y="644" class="member" >+ criarProcuracao(): ProcuracaoPF</text>
+<text x="616" y="670" class="member" >+ criarContrato(): ContratoPF</text>
+</g>
+<g class="uml-class" data-class="ProcuracaoPF" data-box="40,584,300,84"><rect x="40" y="584" width="300" height="84" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="41" y="585" width="298" height="39" fill="#eeeeee"/><path d="M 40,624 H 340" stroke="#555555"/>
+<text x="190.0" y="611" class="name" text-anchor="middle">ProcuracaoPF</text>
+<text x="56" y="648" class="member" >+ emitir(): void</text>
+</g>
+<g class="uml-class" data-class="ContratoPF" data-box="1340,584,300,84"><rect x="1340" y="584" width="300" height="84" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="1341" y="585" width="298" height="39" fill="#eeeeee"/><path d="M 1340,624 H 1640" stroke="#555555"/>
+<text x="1490.0" y="611" class="name" text-anchor="middle">ContratoPF</text>
+<text x="1356" y="648" class="member" >+ assinar(): void</text>
+</g>
+<g class="uml-class" data-class="FabricaPJ" data-box="600,820,500,104"><rect x="600" y="820" width="500" height="104" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="601" y="821" width="498" height="39" fill="#eeeeee"/><path d="M 600,860 H 1100" stroke="#555555"/>
+<text x="850.0" y="847" class="name" text-anchor="middle">FabricaPJ</text>
+<text x="616" y="884" class="member" >+ criarProcuracao(): ProcuracaoPJ</text>
+<text x="616" y="910" class="member" >+ criarContrato(): ContratoPJ</text>
+</g>
+<g class="uml-class" data-class="ProcuracaoPJ" data-box="40,824,300,84"><rect x="40" y="824" width="300" height="84" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="41" y="825" width="298" height="39" fill="#eeeeee"/><path d="M 40,864 H 340" stroke="#555555"/>
+<text x="190.0" y="851" class="name" text-anchor="middle">ProcuracaoPJ</text>
+<text x="56" y="888" class="member" >+ emitir(): void</text>
+</g>
+<g class="uml-class" data-class="ContratoPJ" data-box="1340,824,300,84"><rect x="1340" y="824" width="300" height="84" fill="white" stroke="#555555" stroke-width="1.5"/><rect x="1341" y="825" width="298" height="39" fill="#eeeeee"/><path d="M 1340,864 H 1640" stroke="#555555"/>
+<text x="1490.0" y="851" class="name" text-anchor="middle">ContratoPJ</text>
+<text x="1356" y="888" class="member" >+ assinar(): void</text>
+</g>
+</svg></body></html>
